@@ -14,26 +14,26 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/node/v/vite.svg" alt="node compatibility"></a>
 </p>
 
-# mern-logsecurity-best-practice
+# mern-logsecurity-dashboard
 
-implemented auth log security in jwt from cross-site-scripting && cross-site-req-forgery <br/>
+implemented RBAC (Role-Based Access Control) multi roles auth and log security in jwt from XSS (Cross-Site Scripting) and CSRF (Cross-Site Request Forgery) <br/>
 
-<img src='https://github.com/0xSabdadev/mern-logsecurity-best-practice/blob/master/src/images/demo.png'>
+<img src='https://github.com/0xSabdadev/mern-logsecurity-dashboard/blob/master/src/images/demo.png'>
 
 ## 🛠 Installation & Set Up
 
 In the project directory, you can run:
 
 ```
-git clone https://github.com/0xSabdadev/mern-logsecurity-best-practice
+git clone https://github.com/0xSabdadev/mern-logsecurity-dashboard
 ```
 
 ```
-git clone git@github.com:0xSabdadev/mern-logsecurity-best-practice
+git clone git@github.com:0xSabdadev/mern-logsecurity-dashboard
 ```
 
 ```
-cd mern-logsecurity-best-practice
+cd mern-logsecurity-dashboard
 ```
 
 ```sh

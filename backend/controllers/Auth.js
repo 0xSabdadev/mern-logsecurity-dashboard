@@ -18,3 +18,10 @@ export const Login = async (req, res) => {
     const role = user.role
     res.status(200).json({uuid, name, email, role})
 }
+
+export const Logout = async (req, res) => {
+    req.session.destroy(err => {
+        if (err) return res.status(400).json({msg: 'Tidak dapat Logout'})
+        res.status(200).json({msg: 'Logout Gagal'})
+    })
+}

@@ -1,7 +1,23 @@
 import Products from '../models/ProductModel'
+import Users from '../models/UserModel'
 
-export const getProducts = (req, res) => {}
-export const getProductsById = (req, res) => {}
-export const createProduct = (req, res) => {}
-export const updateProduct = (req, res) => {}
-export const deleteProduct = (req, res) => {}
+export const getProducts = async (req, res) => {
+    let response
+    //jika admin, bisa melihat semua product
+    //jika user, hanya bisa melihat product yg dia inputkkan
+    if (req.role == 'admin') {
+        response = await Products.findAll({
+            //karena ada relasi product dan user yg dibuat, jgn lipa diinclude
+            include: [
+                {
+                    model: Users,
+                },
+            ],
+        })
+    } else {
+    }
+}
+export const getProductsById = async (req, res) => {}
+export const createProduct = async (req, res) => {}
+export const updateProduct = async (req, res) => {}
+export const deleteProduct = async (req, res) => {}

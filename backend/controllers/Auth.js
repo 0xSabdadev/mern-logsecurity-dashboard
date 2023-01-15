@@ -1,4 +1,4 @@
-import Users from '../models/UserModel'
+import Users from '../models/UserModel.js'
 import argon2 from 'argon2'
 
 export const Login = async (req, res) => {
@@ -38,6 +38,6 @@ export const validateUser = async (req, res) => {
 export const Logout = async (req, res) => {
     req.session.destroy(err => {
         if (err) return res.status(400).json({msg: 'Tidak dapat Logout'})
-        res.status(200).json({msg: 'Logout Gagal'})
+        res.status(200).json({msg: 'Logout Berhasil'})
     })
 }

@@ -16,16 +16,25 @@ GET http://localhost:5000/users
 GET http://localhost:5000/users/1e8b0981-cd72-44b1-9904-ae6ec39b9008
 
 ###
-PATCH http://localhost:5000/users/1e8b0981-cd72-44b1-9904-ae6ec39b9008
+PATCH http://localhost:5000/users/928b45e5-d8e9-4420-bf05-97e07551c15f
 Content-Type: application/json
 
 {
-    "name":"Johan Updated",
-    "email":"Johan@gmail.com",
+    "name":"Admon",
+    "email":"admin@gmail.com",
     "password":"",
     "confPassword":"",
-    "role":"user"
+    "role":"admin"
 }
 
 ###
 DELETE http://localhost:5000/users/1e8b0981-cd72-44b1-9904-ae6ec39b9008
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"12345"
+}

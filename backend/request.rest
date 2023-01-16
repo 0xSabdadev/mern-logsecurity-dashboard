@@ -48,6 +48,9 @@ DELETE http://localhost:5000/logout
 ###
 //get all producs
 GET http://localhost:5000/products
+###
+//get single producs
+GET http://localhost:5000/products/795d652d-17bb-4b2f-a94b-e4874c2fb8ab
 
 ###
 POST http://localhost:5000/products

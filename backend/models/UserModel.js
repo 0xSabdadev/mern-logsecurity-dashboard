@@ -19,7 +19,6 @@ const Users = db.define(
             allowNull: false,
             validate: {
                 notEmpty: true,
-                //min 3 max 100 char
                 len: [3, 100],
             },
         },

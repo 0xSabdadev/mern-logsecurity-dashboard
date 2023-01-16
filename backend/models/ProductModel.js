@@ -5,7 +5,7 @@ import Users from './UserModel.js'
 const {DataTypes} = Sequelize
 
 const Products = db.define(
-    'products',
+    'product',
     {
         uuid: {
             type: DataTypes.STRING,
@@ -20,7 +20,6 @@ const Products = db.define(
             allowNull: false,
             validate: {
                 notEmpty: true,
-                //min 3 max 100 char
                 len: [3, 100],
             },
         },
@@ -31,7 +30,7 @@ const Products = db.define(
                 notEmpty: true,
             },
         },
-        UserId: {
+        userId: {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
@@ -44,9 +43,7 @@ const Products = db.define(
     },
 )
 
-//set relasi (user bisa beli banyak produk)
 Users.hasMany(Products)
-//set foreign key
 Products.belongsTo(Users, {foreignKey: 'userId'})
 
 export default Products

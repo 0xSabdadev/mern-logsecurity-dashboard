@@ -5,14 +5,14 @@ import dotenv from 'dotenv'
 import db from './config/Database.js'
 import SequelizeStore from 'connect-session-sequelize'
 import UserRoute from './routes/UserRoute.js'
-import ProductRoute from './routes/UserRoute.js'
+import ProductRoute from './routes/ProductRoute.js'
 import AuthRoute from './routes/AuthRoute.js'
-
 dotenv.config()
+
 const app = express()
 
-//!masukkan session ke db (membuat store dulu)
 const sessionStore = SequelizeStore(session.Store)
+
 const store = new sessionStore({
     db: db,
 })
@@ -27,13 +27,13 @@ app.use(
         secret: process.env.SESS_SECRET,
         resave: false,
         saveUninitialized: true,
-        //!session akan disimpan ke db
         store: store,
         cookie: {
             secure: 'auto',
         },
     }),
 )
+
 app.use(
     cors({
         credentials: true,
